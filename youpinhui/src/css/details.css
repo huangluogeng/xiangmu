@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.goodslist ul {
+    width: 1108px;
+    ;
+    margin: 0 auto;
+}
+
+.goodslist li {
+    float: left;
+    width: 250px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 350px;
+    margin: 0px 5px 5px 0;
+}
+
+.goodslist li img {
+    width: 250px;
+}
+
+
+/* 详情页 */
+
+.details {
+    margin: 30px 0 0 50px;
+}
+
+.details_left {
+    float: left;
+    width: 400px;
+    position: relative;
+}
+
+.details_right {
+    float: left;
+    margin-left: 420px;
+}
+
+.scale {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.bf {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    position: absolute;
+    left: 410px;
+    top: 0px;
+    visibility: hidden;
+}
+
+.sf {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: orange;
+    opacity: 0.3;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+    cursor: move;
+}
+
+.bpic {
+    width: 800px;
+    height: 800px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.spic {
+    border: 1px solid #ccc;
+    width: 400px;
+    position: relative;
+}
+
+.spic img {
+    width: 400px;
+    display: block;
+}
+
+.icolist {
+    width: 400px;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 5px;
+}
+
+.movelist {
+    width: 376px;
+    height: 62px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.movelist ul {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.movelist li {
+    float: left;
+    padding: 0 5px;
+    margin-right: 5px;
+}
+
+#left,
+#right {
+    text-decoration: none;
+    width: 12px;
+    float: left;
+}
+
+#left {
+    color: #fff;
+}
+
+#right {
+    color: #333;
+}
+
+.movelist li {
+    width: 58px;
+    height: 60px;
+    border: 1px solid #ccc;
+}
+
+.movelist li img {
+    width: 58px;
+    display: block;
+}
+
+.details_right .title,
+.details_right .price {
+    line-height: 36px;
+}
+
+.linkbox {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -150px;
+    display: none;
+    background: #eee;
+}
+
+.linkbox span {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
