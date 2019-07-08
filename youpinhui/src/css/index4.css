@@ -153,7 +153,6 @@
     background: -moz-linear-gradient(left, #ff5953, #ff3d5a);
     /* Firefox 3.6 - 15 */
     background: linear-gradient(left, #ff5953, #ff3d5a);
-    /* 鏍囧噯鐨勮娉曪紙蹇呴』鏀惧湪鏈€鍚庯級 */
     border-radius: 11px;
     padding: 0 10px 0 19px;
     color: #FFF;
@@ -385,6 +384,9 @@
 .tv_live_img_box {
     width: 300px;
 }
+
+
+/* 包含图片的盒子 */
 
 .tv_day_img_box {
     width: 210px;

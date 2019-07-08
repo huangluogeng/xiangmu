@@ -1,3 +1,8 @@
+/* 头部css样式 */
+
+
+/* 轮播图之上的 */
+
 article,
 aside,
 details,
@@ -2007,13 +2012,15 @@ em.dj-dj5 {
     display: block;
 }
 
+
+/* 
 .lazy-loading {
     background: url(../../images/2015/2015_public/zwt.jpg) no-repeat 50% 50%;
     display: block;
     background-color: #fff;
     width: 100%;
-    /*height:100%;*/
-}
+    height: 100%;
+} */
 
 
 /*左上角*/
