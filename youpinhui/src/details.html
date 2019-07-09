@@ -11,44 +11,139 @@
 
 <body>
     <script src="./script/js/details.js"></script>
-    <div class="details">
-        <div class="details_left">
-            <div class="scale">
-                <!-- 小图 -->
-                <div class="spic">
-                    <img src="https://assets.ugoshop.com/proimage/ba37c8d73de148f986c403061d8b61ec.jpg!p450" alt="">
-                    <div class="sf"></div>
-                </div>
-                <div class="icolist">
-                    <a href="javascript:;" id="left">&lt;</a>
-                    <div class="movelist">
-                        <ul>
+    <div class="showall">
+        <!--left -->
+        <div class="showbot">
+            <img src="./img/1b36b195e123247014be3d53d33eded4.jpg!p450" width="400" height="400" />
+            <div id="showbox">
 
-                        </ul>
+                <!-- <img src="images/photos/img02.png" width="400" height="400" />
+                <img src="images/photos/img03.png" width="400" height="400" />
+                <img src="images/photos/img04.png" width="400" height="400" />
+                <img src="images/photos/img05.png" width="400" height="400" />
+                <img src="images/photos/img06.png" width="400" height="400" /> -->
+
+            </div>
+            <!--展示图片盒子-->
+            <div id="showsum">
+
+
+                <!--展示图片里边-->
+            </div>
+            <p class="showpage">
+                <a href="javascript:void(0);" id="showlast">
+                </a>
+                <a href="javascript:void(0);" id="shownext"> > </a>
+            </p>
+        </div>
+        <!--conet -->
+        <div class="tb-property">
+            <div class="tr-nobdr">
+                <h3> 跨境直邮H health加拿大清肺原液</h3>
+            </div>
+            <div class="txt">
+                <span class="nowprice">￥<a href="">599.00</a></span>
+                <div class="cumulative">
+                    <span class="number ty1">累计售出<br /><em id="add_sell_num_363">370</em></span>
+                    <span class="number tyu">累计评价<br /><em id="add_sell_num_363">25</em></span>
+                </div>
+            </div>
+            <div class="txt-h">
+                <span class="tex-o">分类</span>
+                <ul class="glist" id="glist" data-monitor="goodsdetails_fenlei_click">
+                    <li><a title="红色36g" href="">红色36g</a></li>
+                    <li><a title="蓝色16g" href="">红色36g</a></li>
+                    <!--<li><a title="红色36g" href="">红色36g</a></li>
+                            <li><a title="蓝色16g" href="">红色36g</a></li>-->
+                </ul>
+            </div>
+            <div class="gcIpt">
+                <span class="guT">数量</span>
+                <input id="min" name="" type="button" value="-" />
+                <input id="text_box" name="" type="text" value="1" style="width:30px; text-align: center; color: #0F0F0F;" />
+                <input id="add" name="" type="button" value="+" />
+                <span class="Hgt">库存（99）</span>
+            </div>
+            <div class="nobdr-btns">
+                <button class="addcart hu"><img src="./img/shop.png" width="25" height="25"/>加入购物车</button>
+                <a href="cart.html"> <button class="addcart yh"><img src="img/ht.png" width="25" height="25"/>立即购买</button></a>
+            </div>
+            <div class="guarantee">
+                <span>邮费：包邮&nbsp;&nbsp;支持货到付款 <a href=""><img src="images/me.png"/></a></span>
+            </div>
+        </div>
+
+    </div>
+    <!-- 推荐搭配 -->
+    <div class="gdetail">
+        <div class="dp_wrap_title">
+            推荐搭配
+        </div>
+        <div class="dp_wrap">
+            <!-- 结算 -->
+            <div class="dq_total_wrap">
+                <div class="icon_equal">
+                    =
+                </div>
+                <div class="dp_num">已经选择0个配件
+                    <p class="dq_price">总计<span>￥599.00</span>元</p>
+                    <button class="get">立即购买</button>
+                </div>
+            </div>
+            <!-- 搭配1 -->
+            <div class="dq_ori">
+                <a class="dq_ori_prd" href=""><img src="images/hdy_07.png" /></a>
+                <a class="ori_prd" href="">行车记录仪二代·美猴王版（黑灰色）</a>
+                <p class="ori_prd dp_wrap_pprice_ori">￥599.00</p>
+            </div>
+            <div class="scroll_wrap">
+                <!-- 搭配2 -->
+                <div class="dp_prd">
+                    <div class="icon_plus">+</div>
+                    <div class="dp_p_wrap">
+                        <a class="dp_wrap_pimg" href="" target="_blank"><img src="images/list_10.jpg" /></a>
+                        <a class="dp_wrap_pname" href="" target="_blank">亿连方控-智能安全驾驶控制器 时尚版</a>
+                        <p class="dp_wrap_pprice">
+                            <label>
+                            <input type="checkbox" data-price="199" data-item="570b1b2f5efb114c378b4575">
+                            ￥199
+                            </label>
+                        </p>
                     </div>
-                    <a href="javascript:;" id="right">&gt;</a>
                 </div>
-            </div>
-            <!-- 大图 -->
-            <div class="bf">
-                <img src="https://assets.ugoshop.com/proimage/ba37c8d73de148f986c403061d8b61ec.jpg!p450" class="bpic" alt="">
+                <!-- 搭配3 -->
+                <div class="dp_prd">
+                    <div class="icon_plus">+</div>
+                    <div class="dp_p_wrap">
+                        <a class="dp_wrap_pimg" href="" target="_blank"><img src="images/hdy_09.png" /></a>
+                        <a class="dp_wrap_pname" href="" target="_blank">亿连方控-智能安全驾驶控制器 时尚版</a>
+                        <p class="dp_wrap_pprice">
+                            <label>
+                            <input type="checkbox" data-price="199" data-item="570b1b2f5efb114c378b4575">
+                            ￥199
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <!-- 搭配4 -->
+                <div class="dp_prd">
+                    <div class="icon_plus">+</div>
+                    <div class="dp_p_wrap">
+                        <a class="dp_wrap_pimg" href="" target="_blank"><img src="images/list_03.jpg" /></a>
+                        <a class="dp_wrap_pname" href="" target="_blank">O2+车载空气净化器DM2</a>
+                        <p class="dp_wrap_pprice">
+                            <label>
+                            <input type="checkbox" data-price="199" data-item="570b1b2f5efb114c378b4575">
+                            ￥365
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <!-- 产品结束 -->
             </div>
         </div>
-        <div class="details_right">
-            <div class="title">暖小糖 台湾原产黑糖饼</div>
-            <div class="price">298.99</div>
-            <div class="goodsnum"><input type="text" value="1"><br><button>加入购物车</button></div>
-        </div>
     </div>
-
-
-
-    <div class="linkbox">
-        <h4>商品添加成功</h4>
-        <a href="cart.html">购物车列表页面</a>
-        <a href="javascript:;">继续购物</a>
-        <span>X</span>
-    </div>
+    <script src="./script/js/details.js"></script>
 </body>
 
 </html>

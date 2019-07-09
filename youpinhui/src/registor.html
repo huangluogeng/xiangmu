@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <div class="welland">
         <img src="https://www.ugoshop.com/goods-182608.html" alt="" class="EWM" style="">
         <!--LOGO-->
@@ -19,7 +20,7 @@
                 <a class="l" href="https://www.ugoshop.com" target="_blank"></a>
                 <span class="l reglogo"></span>
             </div>
-            <p class="r kefuphonenum">已经注册，<a target="_blank" href="user.php">现在登录》</a></p>
+            <p class="r kefuphonenum">已经注册，<a target="_blank" href="login.html">现在登录》</a></p>
         </div>
         <!--LOGO OVER-->
         <!--regnav begin-->
@@ -29,7 +30,7 @@
                 <!--<li  class="regnav2"><span class="icon2">邮箱注册</span></li>-->
                 <!--<li class="regnav3"><span class="icon3">电视用户激活</span></li>-->
             </ul>
-            <label class="regnav_tips">如有疑问请点击<a class="cg" href="/help.html" target="_blank">帮助中心</a>，或拨打客服热线：<em>400-707-0707</em></label>
+            <label class="regnav_tips">如有疑问请点击<a class="cg" href="/help.html" target="_blank">帮助中心</a>, 或拨打客服热线：<em>400-707-0707</em></label>
         </div>
         <!--regnav OVER-->
         <!--框内开始-->
@@ -53,12 +54,6 @@
                                         看不清，
                                     <a href="javascript:;" class="code_refresh cg">换一张</a>
                                  </label>
-                            <script>
-                                $('.code_refresh').click(function() {
-                                    $(this).prev().click();
-                                });
-                            </script>
-
                             <input type="hidden" id="check_box_code1" name="check_box_code" value="">
                         </div>
                     </div>
@@ -78,101 +73,7 @@
                             <div id="confirm" class="i-name land_ico3"></div>
                         </div>
                     </div>
-                    <div class="item phone-regName" id="itemh">
-                        <span class="l labname1">短信验证码：</span>
-                        <div class="item-ifo l">
-                            <input type="text" class="yhm_text1 l" value="" id="verif_code">
-                            <label class="l">
-                                <input class="ymasage" id="btn5" value="获取短信验证码" type="button">
-                                  </label>
-                            <script type="text/javascript">
-                                var wait = 90;
 
-                                function time(o, num) {
-
-                                    if (wait == 0) {
-                                        o.removeAttribute("disabled", false);
-                                        $('#ymztip').remove();
-                                        o.value = "获取短信验证码";
-                                        codesrc = document.getElementById("checkcode" + num).src;
-                                        document.getElementById("checkcode" + num).src = codesrc + "&random=" + Math.random();
-                                        wait = 90;
-                                    } else {
-                                        o.setAttribute("disabled", true);
-                                        o.value = "重新发送(" + wait + '秒' + ")";
-
-                                        if (wait == 90) {
-                                            $("#btn5").after('<div id="ymztip" class="etips">验证码已经发送,请查收!</div>');
-                                        }
-                                        if (wait <= 87) {
-                                            $("#ymztip").remove();
-                                        }
-                                        wait--;
-                                        setTimeout(function() {
-                                                time(o, num)
-                                            },
-                                            1000);
-
-                                    }
-                                }
-
-                                document.getElementById("btn5").onclick = function() {
-                                    if ($("#etips").length > 0) {
-                                        return false;
-                                    } else {}
-                                    verification_code(1);
-
-                                };
-
-                                function verification_code(num) {
-                                    var sj_code = document.getElementById('sj_code').value;
-                                    if (sj_code == "") {
-                                        $('#sj_code').after('<div class="ztips" id="etips">请输入常用手机号，避免忘记</div>');
-                                        return false;
-                                    }
-                                    var check_code = $("#yaz_ma_pcheck_code").val();
-                                    if (check_code == "") {
-                                        $("#yaz_ma_pcheck_code").after('<div id="aaacheck" class="etips">验证码错误！</div>');
-                                        return false;
-                                    }
-                                    var json_data = "";
-                                    json_data += '&username' + '=' + sj_code + '&code=' + check_code + "&num=1";
-                                    $.ajax({
-                                        type: 'post',
-                                        url: '/flow/auth/sendverifycode',
-                                        data: json_data,
-                                        dataType: 'json',
-                                        success: function(date) {
-                                            if (date.code == -400604) {
-                                                alert('每天只能发送五条短信！');
-                                                $('#check_box_code' + num).val(0);
-                                            } else if (date.code == -400605) {
-                                                alert('短信发送间隔不得少于90秒！');
-                                                $('#check_box_code' + num).val(0);
-
-                                            } else if (date.code == -400601) {
-                                                $('#check_box_code' + num).val(0);
-                                                $("#yaz_ma_pcheck_code").after('<div id="aaacheck" class="etips">验证码错误！</div>');
-                                                codesrc = document.getElementById("checkcode1").src;
-                                                document.getElementById("checkcode1").src = codesrc + "&random=" + Math.random();
-                                            } else if (date.code !== 0) {
-                                                $('#check_box_code' + num).val(0);
-                                                $('#sj_code').after('<div class="ztips" id="iphoness">请输入常用手机号，避免忘记</div>');
-                                                alert(data.msg);
-                                            } else {
-                                                $('#check_box_code' + num).val(1);
-                                                $("#iphoness").remove();
-                                                $("#aaacheck").remove();
-                                                time(document.getElementById("btn5"), 1);
-                                            }
-                                            $('#aaab').remove();
-                                        }
-                                    })
-
-                                }
-                            </script>
-                        </div>
-                    </div>
                     <div class="item phone-regName" id="itemh2">
                         <span class="l labname1"></span>
                         <div class="item-ifo l">
@@ -199,70 +100,71 @@
             </div>
             <!--手机注册结束-->
             <!--邮箱注册开始-->
-            <!--<div class="mailreg"   style="display:none">
-                     <input type='hidden'  id="email_tishi" value="">
-                     <input type='hidden'  id="back_act" value="">
-                             <form action="" method="get">
-                         <div class="item phone-regName"> 
-                            <span class="l labname1">邮箱地址：</span>
-                            <div class="l item-ifo app4">
-                               <input class="regk text4" type="text" value="" id="regk_email"/>
-                               <div id="emailadd" class="i-name land_ico4"></div>
-                            </div>  
-                         </div>
-                         <div class="item phone-regName"> 
-                            <span class="l labname1">设置密码：</span>
-                            <div class="l item-ifo app5">
-                               <input class="regk text5" type="password" value="" />
-                               <div id="esetpassword" class="i-name land_ico5"></div>
-                            </div>  
-                         </div>
-                         <div class="item phone-regName"> 
-                            <span class="l labname1">确认密码：</span>
-                            <div class="l item-ifo">
-                               <input class="regk text6" type="password" id="password"value="" />
-                               <div id="conforpw" class="i-name land_ico6"></div>
-                            </div>  
-                         </div>
-                        <div class="item phone-regName" id="itemh">
-                             <span class="l labname1">验证码：</span>
-                             <div class="item-ifo l">
-                                 <input type="text" class="yhm_text1 l text8" id="yaz_ma" value="" />
-                                 <label class="yimg">
+            <div class="mailreg" style="display:none">
+                <input type='hidden' id="email_tishi" value="">
+                <input type='hidden' id="back_act" value="">
+                <form action="" method="get">
+                    <div class="item phone-regName">
+                        <span class="l labname1">邮箱地址：</span>
+                        <div class="l item-ifo app4">
+                            <input class="regk text4" type="text" value="" id="regk_email" />
+                            <div id="emailadd" class="i-name land_ico4"></div>
+                        </div>
+                    </div>
+                    <div class="item phone-regName">
+                        <span class="l labname1">设置密码：</span>
+                        <div class="l item-ifo app5">
+                            <input class="regk text5" type="password" value="" />
+                            <div id="esetpassword" class="i-name land_ico5"></div>
+                        </div>
+                    </div>
+                    <div class="item phone-regName">
+                        <span class="l labname1">确认密码：</span>
+                        <div class="l item-ifo">
+                            <input class="regk text6" type="password" id="password" value="" />
+                            <div id="conforpw" class="i-name land_ico6"></div>
+                        </div>
+                    </div>
+                    <div class="item phone-regName" id="itemh">
+                        <span class="l labname1">验证码：</span>
+                        <div class="item-ifo l">
+                            <input type="text" class="yhm_text1 l text8" id="yaz_ma" value="" />
+                            <label class="yimg">
                                     <img src="/api/checkcode.php?code_len=4&font_size=14&width=89&height=30&font_color=%23313131&background=%23e3e3e3&time=1562383209" id="checkcode" onclick="this.src=this.src+&quot;&amp;&quot;+Math.random()" class="yzm l">
                                         看不清，
                                     <a href="javascript:;" class="code_refresh cg">换一张</a>
                                  </label>
-                             <script>
-                                $('.code_refresh').click(function(){
-                                $(this).prev().click();
-                    });
-                
-                                 </script>
-                             </div>                 
+                            <!-- <script>
+                                $('.code_refresh').click(function() {
+                                    $(this).prev().click();
+                                });
+                            </script> -->
                         </div>
-                        <div class="item phone-regName" id="itemh2">
-                             <span class="l labname1"></span>
-                             <div class="item-ifo l" id="tongyi">
-                                 <input type="checkbox" class="l checkx" id="checkx" checked="checked">
-                                 
-                                  <label class="l checkx">
+                    </div>
+                    <div class="item phone-regName" id="itemh2">
+                        <span class="l labname1"></span>
+                        <div class="item-ifo l" id="tongyi">
+                            <input type="checkbox" class="l checkx" id="checkx" checked="checked">
+
+                            <label class="l checkx">
                                      我已阅读并同意<a class="cg" href="/article-48.html" target="_blank">《惠买用户服务承诺》</a>
-                                  </label> 
-                                  <input type="hidden" value="" id="hidden">
-                             </div>                 
+                                  </label>
+                            <input type="hidden" value="" id="hidden">
                         </div>
-                        <div class="item phone-regName" id="itemh3">
-                             <span class="l labname1"></span>
-                             <div class="item-ifo l">
-                                 <input type="button" id="btn2"class="registsubmit" value="" />
-                                 <br />
-                                 <label>如有疑问请点击<a class="cg" href="/help.html" target="_blank">帮助中心</a>，或拨打客服热线：<em>400-707-0707</em></label>
-                             </div>                 
+                    </div>
+                    <div class="item phone-regName" id="itemh3">
+                        <span class="l labname1"></span>
+                        <div class="item-ifo l">
+                            <input type="button" id="btn2" class="registsubmit" value="" />
+                            <br />
+                            <label>如有疑问请点击<a class="cg" href="/help.html" target="_blank">帮助中心</a>，或拨打客服热线：<em>400-707-0707</em></label>
                         </div>
-                       </form>
-                     </div>-->
+                    </div>
+                </form>
+            </div>-->
             <!--邮箱注册结束-->
+
+
             <!--电视激活开始-->
             <div class="TVactive" style="display:none">
                 <form action="" method="get">
@@ -284,11 +186,11 @@
                                         看不清，
                                     <a href="javascript:;" class="code_refresh cg">换一张</a>
                                  </label>
-                            <script>
+                            <!-- <script>
                                 $('.code_refresh').click(function() {
                                     $(this).prev().click();
                                 });
-                            </script>
+                            </script> -->
                         </div>
 
                         <input type="hidden" id="check_box_code2" name="check_box_code" value="0">
@@ -303,62 +205,7 @@
                                   </label>
 
                         </div>
-                        <script type="text/javascript">
-                            document.getElementById("btn").onclick = function() {
-                                verification_code1(2);
-                            }
 
-                            function verification_code1(num) {
-                                var coddds = $("#activeuser").val();
-                                var sj_code = document.getElementById('mobile_activation').value;
-                                var yaz_ma = $("#yaz_ma_pcheck_code2").val();
-                                //alert(yaz_ma);
-                                if (sj_code == '') {
-                                    $('#mobile_activation').after("<div class='ztips'>请输入您来电订购时登记的手机号码</div>");
-                                    wait = 0;
-                                    return;
-                                } else if (coddds != '') {
-                                    wait = 0;
-                                    return;
-                                }
-                                var json_data = "";
-                                $.ajax({
-                                    type: 'post',
-                                    url: '/flow/auth/sendverifycode',
-                                    data: {
-                                        "username": sj_code,
-                                        "nameType": "mobile",
-                                        "num": 211,
-                                        "type": "regist",
-                                        "code": $("#yaz_ma_pcheck_code2").val()
-                                    },
-                                    dataType: 'json',
-                                    success: function(data) {
-                                        if (data.code == -400604) {
-                                            alert('每天只能发送五条短信！');
-                                            $('#check_box_code' + num).val(0);
-                                        } else if (data.code == -400605) {
-                                            alert('短信发送间隔不得少于90秒！');
-                                            $('#check_box_code' + num).val(0);
-                                        } else if (data.code == -400601) {
-                                            $('#check_box_code' + num).val(0);
-                                            $("#yaz_ma_pcheck_code2").after('<div id="aaacheck" class="etips">验证码错误！</div>');
-                                            var codesrc = $("#checkcode2").attr("src");
-                                            $("#checkcode2").attr("src", codesrc + "&random=" + Math.random());
-                                        } else if (data.code !== 0) {
-                                            $('#check_box_code' + num).val(0);
-                                            $('#sj_code').after('<div class="ztips" id="iphoness">请输入常用手机号，避免忘记</div>');
-                                        } else {
-                                            $('#check_box_code' + num).val(1);
-                                            $("#iphoness").remove();
-                                            $("#aaacheck").remove();
-                                            time(document.getElementById("btn"), 2);
-                                        }
-                                        $('#aaab').remove();
-                                    }
-                                });
-                            }
-                        </script>
                     </div>
                     <div class="item phone-regName">
                         <span class="l labname1">设置密码：</span>
@@ -396,6 +243,7 @@
             </div>
         </div>
     </div>
+    <script src="./script/js/registor.js"></script>
 </body>
 
-</html>；
+</html>
