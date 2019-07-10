@@ -1,43 +1,39 @@
-;
-! function() {
+$(function() {
     $.ajax({
-        url: 'http://localhost/xiangmu/youpinhui/php/',
-        dataType: 'json'
-
-    }).done(function(data) {
-        var $html = ' <div class="three_col three_col460 c_clearfix">';
-        console.log(data);
-        $.each(data, function*(index, value) {
-            $html += `
-			<li>
-                        <div class="three_box">
-                            <a href="details.html?  sid=${value.picid.url}"  alt="" title="惠买" id="__AD_shouye33_jianhuo_0">
-                                <div class="three_img_box">
-                                    <img class="lazy-loading" src="/themes/ugo/images/2015/2015_public/grey.png" data-original="https://assets.ugoshop.com/proimage/be0bc750e1aabec223adc0f443db80dc.jpg!p450" alt="" title="惠买"> </div>
-                                <p class="three_box_tit c_clearfix"><em class="img_tit">谷小盒 正光原生态精品绿豆2.5kg（500g*5袋）</em></p>
-                                <p class="three_subtit">${value.title}</p>
-                                <div class="three_yen">
-                                    <span class="fl three_price"><i>¥</i>${value.price}</span>
-                                    <span class="fl sale_price">
-											<p class="i_pos_abs">
-											</p>
-											<span class="fl five_star mt5"></span>
-                                    <span class="or_p"></span><em class="line_price">¥46.8</em>
-                                    </span>
-                                    <span class="fr purchased"><i>0人</i>已购买</span>
-                                </div>
-                            </a>
+        type: "GET",
+        url: "http://localhost/xiangmu/youpinhui/php/goodlist.php",
+        dataType: "json",
+        success: function(data) {
+            var str = "";
+            $.each(data, function(ele, list) {
+                str += ` <li>
+                <div class="three_box">
+                    <a href="details.html?id=${list.picid}" alt="" title="惠买" id="__AD_shouye33_jianhuo_0">
+                        <div class="three_img_box">
+                            <img class="lazy-loading" src="${list.url}" data-original="https://assets.ugoshop.com/proimage/be0bc750e1aabec223adc0f443db80dc.jpg!p450" alt="" title="惠买"> </div>
+                        <p class="three_box_tit c_clearfix"><em class="img_tit">${list.title}</em></p>
+                        <p class="three_subtit">健康优质生态绿豆</p>
+                        <div class="three_yen">
+                            <span class="fl three_price"><i>¥</i>${list.price}</span>
+                            <span class="fl sale_price">
+                                    <p class="i_pos_abs">
+                                                                                                            </p>
+                                    <span class="fl five_star mt5"></span>
+                            <span class="or_p"></span><em class="line_price">¥46.8</em>
+                            </span>
+                            <span class="fr purchased"><i>0人</i>已购买</span>
                         </div>
-                        <div class="tax_box_bt">
-                        </div>
-                    </li>
-			`;
-
-        });
-        $html += '</div>';
-        $('.piclist').html($html);
+                    </a>
+                </div>
+                <div class="tax_box_bt">
+                </div>
+            </li>`
+            });
+            str += "";
+            $(".list").append(str);
+        }
     });
-}();
+});
 
 
 // ! function() {
@@ -68,4 +64,4 @@
 //         $html += '</ul>';
 //         $('.goodlist').html($html);
 //     });
-// }();
+// }();<li>

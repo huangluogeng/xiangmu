@@ -1,10 +1,21 @@
-<?php
-require "conn.php";
+<?php 
 
-$result=$conn->query("select * from piclist");
+ include('conn.php');
+ 
+ $sql = "select * from piclist";
 
-$dataarr=array();
-for($i=0;$i<$result->num_rows;$i++){
-   $dataarr[$i] = $result->fetch_assoc();
-}
-echo json_encode($dataarr);
+ $res = $mysqli->query($sql);
+
+ $arr = array();
+
+    while($row = $res->fetch_assoc()){
+        array_push($arr,$row);
+    }
+
+    $json = json_encode($arr);
+    
+    echo $json;
+
+    $mysqli->close();
+
+?>
