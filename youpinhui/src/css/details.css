@@ -177,7 +177,7 @@ textarea {
 }
 
 
-/*{  behavior: url(css/PIE.htc); position: relative;}*/
+/* 放大镜效果 */
 
 .showbot {
     float: left;
@@ -186,12 +186,12 @@ textarea {
 }
 
 #showbox {
-    height: 120px;
+    height: 400px;
     width: 400px;
-    background: #eee;
+    background: cyan;
     position: absolute;
     left: 0;
-    top: 440px
+    top: 0px;
 }
 
 #showbox img {
@@ -204,8 +204,25 @@ textarea {
 }
 
 #showsum {
-    left: 25px;
+    position: absolute;
+    width: 400px;
+    height: 90px;
+    top: 400px;
+    left: 0px;
     margin-top: 10px;
+}
+
+#showsun .min1-pic {
+    margin-left: 0px;
+}
+
+#showsum li {
+    width: 70px;
+    height: 80px;
+    float: left;
+    border: 1px solid orangered;
+    background: red;
+    margin-right: 8px;
 }
 
 #showsum span {
@@ -214,6 +231,28 @@ textarea {
 
 #showsum span.sel {
     border: 1px solid #f60;
+}
+
+.minfang {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    opacity: 0.3;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+}
+
+.bigfang {
+    width: 560px;
+    height: 680px;
+    border: 1px solid #000;
+    overflow: hidden;
+    position: absolute;
+    left: 410px;
+    visibility: hidden;
+    z-index: 100;
 }
 
 .showpage {
@@ -528,7 +567,7 @@ textarea {
 
 .gdetail {
     width: 1240px;
-    margin: 0 auto;
+    margin: 20px auto;
     clear: both;
 }
 
