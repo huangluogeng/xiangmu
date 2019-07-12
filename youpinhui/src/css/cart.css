@@ -907,7 +907,8 @@ i {
     display: none;
 }
 
-.slider-page-btn a {
+
+/* .slider-page-btn a {
     position: absolute;
     display: block;
     top: 50%;
@@ -925,7 +926,7 @@ i {
     font-size: 22px;
     font-weight: 400;
     font-family: simsun;
-}
+} */
 
 .left-btn {
     left: 0;

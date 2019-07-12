@@ -1,7 +1,7 @@
 $(function() {
     $.ajax({
         type: "GET",
-        url: "http://localhost/xiangmu/youpinhui/php/goodlist.php",
+        url: "http://10.31.158.37/xiangmu/youpinhui/php/goodlist.php",
         dataType: "json",
         success: function(data) {
             var str = "";

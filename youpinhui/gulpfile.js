@@ -19,12 +19,12 @@ gulp.task('uglifyhtml', () => {
 
 
 //编译压缩sass-->css
-gulp.task('minicss', () => {
-    return gulp.src('src/*.css')
+gulp.task('uglifycss', () => {
+    return gulp.src('src/css/*.css')
         .pipe(comfilesass({ //执行sass编译
             outputStyle: 'compressed'
         }))
-        .pipe(gulp.dest('dist/style'));
+        .pipe(gulp.dest('dist/css'));
 });
 
 
@@ -40,7 +40,7 @@ gulp.task('uglifyjs', () => {
 
 gulp.task('uglifyimage', () => {
 
-    return gulp.src('src/img/*/*.{png,jpg,gif,ico}')
+    return gulp.src('src/img/*.png')
         .pipe(imagemin({
             optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
             progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
@@ -50,16 +50,7 @@ gulp.task('uglifyimage', () => {
         .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('uglifypng', () => {
-    return gulp.src('src/images/*.{png,jpg,gif,ico}')
-        .pipe(imagemin({
-            optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
-            progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
-            interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
-            multipass: true //类型：Boolean 默认：false 多次优化svg直到完全优化
-        }))
-        .pipe(gulp.dest('dist/images'));
-});
+
 
 // //es6转es5
 //gulp-babel gulp-core  babel-preset-es2015
