@@ -234,8 +234,6 @@ textarea {
 }
 
 .minfang {
-    width: 100px;
-    height: 100px;
     background: orange;
     opacity: 0.3;
     position: absolute;
@@ -245,14 +243,22 @@ textarea {
 }
 
 .bigfang {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     border: 1px solid #000;
     overflow: hidden;
     position: absolute;
     left: 410px;
     visibility: hidden;
     z-index: 100;
+}
+
+#bpic {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 700px;
+    height: 700px;
 }
 
 .showpage {

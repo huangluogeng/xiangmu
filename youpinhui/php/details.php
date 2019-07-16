@@ -1,11 +1,21 @@
 <?php
-require "conn.php";
+header('content-type:text/html;charset="utf-8"');
 
-if(isset($_GET['picid'])){
-    $sid=$_GET['picid'];
+$mysql_conf = array(
+	'HOST'=>'localhost:3306',
+	'USERNAME'=>'root',
+	'PASSWORD'=>'',
+	'db'=>'jingdong'
+);
+$mysqli = @new mysqli($mysql_conf['HOST'],$mysql_conf['USERNAME'],$mysql_conf['PASSWORD']);
 
-    $result=$conn->query("select * from piclist where picid=$sid ");
-
-    echo json_encode($result->fetch_assoc());
-
+if($mysqli->connect_errno){
+	die('连接错误'.$mysqli->connect_errno);
 }
+
+$mysqli->query("set names 'utf8';");  
+$select_db = $mysqli->select_db($mysql_conf['db']);
+if(!$select_db){
+	die('选择数据库错误'.$mysqli->error);
+}
+?>

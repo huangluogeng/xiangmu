@@ -38,38 +38,25 @@
             <!--手机注册开始-->
             <div class="phonereg">
                 <input type="hidden" id="tishi" value="">
-                <form action="" method="get">
+                <form action="./table.php" method="post" onsubmit="return doTable()">
                     <div class="item phone-regName">
                         <span class="l labname1">手机号码：</span>
                         <div class="l item-ifo app1">
-                            <input class="regk text1" type="text" value="" id="sj_code">
+                            <input type="text" name="tel" class="regk text1" />
                             <div id="phonea1" class="i-name land_ico"></div>
                         </div>
                     </div>
-                    <div class="item phone-regName" id="itemh">
-                        <span class="l labname1">验证码：</span>
-                        <div class="item-ifo l" id="yan_check_code">
-                            <input type="text" name="pcheck_code" class="yhm_text1 l text8" id="yaz_ma_pcheck_code" value="">
-                            <label class="yimg"><img src="https://www.ugoshop.com/api/checkcode.php?code_len=4&amp;font_size=14&amp;width=89&amp;height=30&amp;font_color=%23313131&amp;background=%23e3e3e3&amp;is=1&amp;num=1&amp;time=7b57a1f62e94ed56e2eb5ba8c8753403&amp;rand=424" id="checkcode1" onclick="setTimeout(this.src=this.src+&quot;&amp;&quot;+Math.random())" class="yzm l"> 
-                                        看不清，
-                                    <a href="javascript:;" class="code_refresh cg">换一张</a>
-                                 </label>
-                            <input type="hidden" id="check_box_code1" name="check_box_code" value="">
-                        </div>
-                    </div>
-
-
                     <div class="item phone-regName">
                         <span class="l labname1">设置密码：</span>
                         <div class="l item-ifo app2">
-                            <input class="regk text2" type="password" value="">
+                            <input class="regk text2" type="password" name="password" />
                             <div id="setpassword" class="i-name land_ico2"></div>
                         </div>
                     </div>
                     <div class="item phone-regName">
                         <span class="l labname1">确认密码：</span>
                         <div class="l item-ifo">
-                            <input class="regk text3" type="password" value="">
+                            <input class="regk text3" type="password" name="repass" />
                             <div id="confirm" class="i-name land_ico3"></div>
                         </div>
                     </div>
@@ -99,151 +86,14 @@
                 </form>
             </div>
             <!--手机注册结束-->
-            <!--邮箱注册开始-->
-            <div class="mailreg" style="display:none">
-                <input type='hidden' id="email_tishi" value="">
-                <input type='hidden' id="back_act" value="">
-                <form action="" method="get">
-                    <div class="item phone-regName">
-                        <span class="l labname1">邮箱地址：</span>
-                        <div class="l item-ifo app4">
-                            <input class="regk text4" type="text" value="" id="regk_email" />
-                            <div id="emailadd" class="i-name land_ico4"></div>
-                        </div>
-                    </div>
-                    <div class="item phone-regName">
-                        <span class="l labname1">设置密码：</span>
-                        <div class="l item-ifo app5">
-                            <input class="regk text5" type="password" value="" />
-                            <div id="esetpassword" class="i-name land_ico5"></div>
-                        </div>
-                    </div>
-                    <div class="item phone-regName">
-                        <span class="l labname1">确认密码：</span>
-                        <div class="l item-ifo">
-                            <input class="regk text6" type="password" id="password" value="" />
-                            <div id="conforpw" class="i-name land_ico6"></div>
-                        </div>
-                    </div>
-                    <div class="item phone-regName" id="itemh">
-                        <span class="l labname1">验证码：</span>
-                        <div class="item-ifo l">
-                            <input type="text" class="yhm_text1 l text8" id="yaz_ma" value="" />
-                            <label class="yimg">
-                                    <img src="/api/checkcode.php?code_len=4&font_size=14&width=89&height=30&font_color=%23313131&background=%23e3e3e3&time=1562383209" id="checkcode" onclick="this.src=this.src+&quot;&amp;&quot;+Math.random()" class="yzm l">
-                                        看不清，
-                                    <a href="javascript:;" class="code_refresh cg">换一张</a>
-                                 </label>
-                            <!-- <script>
-                                $('.code_refresh').click(function() {
-                                    $(this).prev().click();
-                                });
-                            </script> -->
-                        </div>
-                    </div>
-                    <div class="item phone-regName" id="itemh2">
-                        <span class="l labname1"></span>
-                        <div class="item-ifo l" id="tongyi">
-                            <input type="checkbox" class="l checkx" id="checkx" checked="checked">
 
-                            <label class="l checkx">
-                                     我已阅读并同意<a class="cg" href="/article-48.html" target="_blank">《惠买用户服务承诺》</a>
-                                  </label>
-                            <input type="hidden" value="" id="hidden">
-                        </div>
-                    </div>
-                    <div class="item phone-regName" id="itemh3">
-                        <span class="l labname1"></span>
-                        <div class="item-ifo l">
-                            <input type="button" id="btn2" class="registsubmit" value="" />
-                            <br />
-                            <label>如有疑问请点击<a class="cg" href="/help.html" target="_blank">帮助中心</a>，或拨打客服热线：<em>400-707-0707</em></label>
-                        </div>
-                    </div>
-                </form>
-            </div>-->
-            <!--邮箱注册结束-->
-
-
-            <!--电视激活开始-->
-            <div class="TVactive" style="display:none">
-                <form action="" method="get">
-                    <div class="item phone-regName">
-                        <input type="hidden" id="activeuser" value="">
-                        <input type="hidden" id="activeuser2" value="">
-                        <span class="l labname1">手机号码：</span>
-                        <div class="l item-ifo app7">
-                            <input class="regk text7" type="text" value="" id="mobile_activation">
-                            <div id="tvphone" class="i-name land_ico7"></div>
-
-                        </div>
-                    </div>
-                    <div class="item phone-regName" id="itemh">
-                        <span class="l labname1">验证码：</span>
-                        <div class="item-ifo l" id="yan_check_code">
-                            <input type="text" name="pcheck_code" class="yhm_text1 l text8" id="yaz_ma_pcheck_code2" value="">
-                            <label class="yimg"><img src="https://www.ugoshop.com/api/checkcode.php?code_len=4&amp;font_size=14&amp;width=89&amp;height=30&amp;font_color=%23313131&amp;background=%23e3e3e3&amp;is=1&amp;num=211&amp;time=7b57a1f62e94ed56e2eb5ba8c8753403&amp;rand=450" id="checkcode2" onclick="setTimeout(this.src=this.src+&quot;&amp;&quot;+Math.random())" class="yzm l">                   
-                                        看不清，
-                                    <a href="javascript:;" class="code_refresh cg">换一张</a>
-                                 </label>
-                            <!-- <script>
-                                $('.code_refresh').click(function() {
-                                    $(this).prev().click();
-                                });
-                            </script> -->
-                        </div>
-
-                        <input type="hidden" id="check_box_code2" name="check_box_code" value="0">
-                    </div>
-
-                    <div class="item phone-regName">
-                        <span class="l labname1">短信验证码：</span>
-                        <div class="item-ifo l" id="phone-regName">
-                            <input type="text" class="yhm_text1 l text8" value="" id="yz">
-                            <label class="l">
-                                     <input class="ymasage" id="btn" value="获取短信验证码" type="button">     
-                                  </label>
-
-                        </div>
-
-                    </div>
-                    <div class="item phone-regName">
-                        <span class="l labname1">设置密码：</span>
-                        <div class="l item-ifo app9">
-                            <input class="regk text9" type="password" value="">
-                            <div id="tvsetpw" class="i-name land_ico9"></div>
-                        </div>
-                    </div>
-                    <div class="item phone-regName" id="itemh">
-                        <span class="l labname1">确认密码：</span>
-                        <div class="l item-ifo" id="item-ifo">
-                            <input class="regk text10" type="password" value="" id="passwordss">
-                            <div id="contvpaw" class="i-name land_ico10"></div>
-                        </div>
-                    </div>
-                    <div class="item phone-regName" id="itemh2">
-                        <span class="l labname1"></span>
-                        <div class="item-ifo l">
-                            <input type="checkbox" class="l checkx" id="checkx2" checked="checked">
-                            <label class="l checkx">
-                                     我已阅读并同意<a class="cg" href="/article-48.html" target="_blank">《惠买用户服务承诺》</a>
-                                  </label>
-                            <input type="hidden" value="" id="hidden2">
-                        </div>
-                    </div>
-                    <div class="item phone-regName" id="itemh3">
-                        <span class="l labname1"></span>
-                        <div class="item-ifo l">
-                            <input type="button" id="btn3" class="registsubmit" value="">
-                            <br>
-                            <label>如有疑问请点击<a class="cg" href="/help.html" target="_blank">帮助中心</a>，或拨打客服热线：<em>400-707-0707</em></label>
-                        </div>
-                    </div>
-                </form>
-            </div>
+            </form>
         </div>
     </div>
+    </div>
+    <script src="./script/js/jquery1.js"></script>
     <script src="./script/js/registor.js"></script>
+
 </body>
 
 </html>
